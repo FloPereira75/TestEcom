@@ -317,23 +317,26 @@ main {
     text-decoration: none;
 }
 
-.new_products {
-    display: flex;
-    justify-content: space-between;
+.productsList_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+    margin: 30px 0;
 }
 
-.new_products_card {
-    width: 275px;
-    height: 392px;
+.productsList_list_card {
+    width: 100%;
+    height: 100%;
 }
 
-.new_products_card_img {
+.productsList_list_card_img {
     position: relative;
 }
 
-.new_products_card_img img {
-    width: 275px;
-    height: 275px;
+.productsList_list_card_img img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -356,43 +359,45 @@ main {
     height: 10px;
 }
 
-.new_products_card_namePrice {
+.productsList_list_card_namePrice {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.new_products_card_namePrice p:first-child {
+.productsList_list_card_namePrice p:first-child {
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
     color: #1F1F23;
 }
 
-.new_products_card_namePrice p:last-child {
+.productsList_list_card_namePrice p:last-child {
     font-weight: 700;
     font-size: 17px;
     line-height: 32px;
     color: var(--kaki);
 }
 
-.new_products_card_description p {
+.productsList_list_card_description p {
     font-size: 14px;
     line-height: 32px;
     color: #656462;
 }
 
-.new_products_card_evaluations {
+.productsList_list_card_evaluations {
     display: flex;
     align-items: baseline;
     gap: 10px;
 }
 
-.new_products_card_evaluations p {
+.productsList_list_card_evaluations p {
     font-size: 12px;
     line-height: 32px;
     color: #868686;
 }
+
+
 
 /* AVIS CLIENT */
 
@@ -699,7 +704,7 @@ footer {
         font-size: 14px;
     }
     .header_action {
-        padding: 20px 2.5%;
+        padding: 20px 5%;
     }
     .header_action_mobile_menu {
         display: flex;
@@ -742,6 +747,11 @@ footer {
     .header_action-research {
         display: none;
     }
+
+    .header_action-logo a img {
+        width: 125px;
+    }
+
     #support_icon {
         display: none;
     }
@@ -800,14 +810,17 @@ footer {
     .new_head_btn {
         max-width: 125px;
     }
-    .new_products {
-        flex-direction: column;
+
+    .productsList_list {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .new_products_card {
-        width: 100%;
+
+    .productsList_list_card_namePrice p:first-child {
+        font-size: 16px;
     }
-    .new_products_card_img img {
-        width: 100%;
+
+    .productsList_list_card_namePrice p:last-child {
+        font-size: 14px;
     }
 
     .avisClients {
@@ -836,7 +849,7 @@ footer {
     }
     .quiSommesNous_Box {
         flex-direction: column;
-        gap: 50px;
+        gap: 100px;
     }
     .quiSommesNous_Box_txt {
         width: 100%;
@@ -863,6 +876,12 @@ footer {
     .footer_logo {
         text-align: center;
     }
+
+    .footer_logo img {
+        width: 125px;
+    }
+
+
     .footer_linksContact {
         flex-direction: column;
         gap: 20px;
@@ -900,17 +919,12 @@ footer {
     .new {
         padding: 2.5% 7.5%;
     }
-    .new_products_card {
-        width: 200px;
-    }
-    .new_products_card_img img {
-        width: 200px;
-        height: 225px;
-    }
-    .card_img_like img {
-        width: 12px;
-        height: 10px;
-    }
+
+
+
+
+    
+    
     .avisClients {
         padding: 5% 7.5%;
     }
@@ -957,12 +971,9 @@ footer {
     .new {
         padding: 3.75% 10%;
     }
-    .new_products_card {
-        width: 250px;
-    }
-    .new_products_card_img img {
-        width: 250px;
-    }
+    
+    
+    
     .avisClients {
         padding: 5% 10%;
     }
