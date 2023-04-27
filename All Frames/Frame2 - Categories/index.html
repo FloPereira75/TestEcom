@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header_promo">
+            <p>Frais de port offerts jusqu'à minuit !</p>
+        </div>
+        <div class="header_action">
+            <div 
+            class="header_action_mobile_menu navbar-toggler" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar" 
+            aria-label="Toggle navigation">
+                <div class="header_action_mobile_menu_hamburger">
+                    <img src="assets/menu-ham.svg" alt="menu hamburger">
+                </div>
+                <p>Menu</p>
+            </div>
+            <div
+            class="offcanvas offcanvas-start" 
+            tabindex="-1" 
+            id="offcanvasNavbar" 
+            aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <div class="header_action_mobile-research">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.7504 21.9163L19.3588 17.5375C20.7757 15.7323 21.5445 13.5032 21.5417 11.2083C21.5417 9.1646 20.9356 7.16675 19.8002 5.46744C18.6647 3.76814 17.0509 2.44369 15.1627 1.66158C13.2746 0.879477 11.1969 0.674843 9.1924 1.07356C7.18793 1.47227 5.34671 2.45643 3.90157 3.90157C2.45643 5.34671 1.47227 7.18793 1.07356 9.1924C0.674843 11.1969 0.879477 13.2746 1.66158 15.1627C2.44369 17.0509 3.76814 18.6647 5.46744 19.8002C7.16675 20.9356 9.1646 21.5417 11.2083 21.5417C13.5032 21.5445 15.7323 20.7757 17.5375 19.3588L21.9163 23.7504C22.0363 23.8715 22.1792 23.9676 22.3366 24.0332C22.494 24.0987 22.6628 24.1325 22.8333 24.1325C23.0039 24.1325 23.1727 24.0987 23.3301 24.0332C23.4875 23.9676 23.6303 23.8715 23.7504 23.7504C23.8715 23.6303 23.9676 23.4875 24.0332 23.3301C24.0987 23.1727 24.1325 23.0039 24.1325 22.8333C24.1325 22.6628 24.0987 22.494 24.0332 22.3366C23.9676 22.1792 23.8715 22.0363 23.7504 21.9163ZM3.45834 11.2083C3.45834 9.67553 3.91287 8.17715 4.76445 6.90267C5.61603 5.62819 6.82641 4.63485 8.24254 4.04827C9.65867 3.46169 11.2169 3.30822 12.7203 3.60725C14.2236 3.90629 15.6046 4.6444 16.6884 5.72826C17.7723 6.81212 18.5104 8.19303 18.8094 9.69639C19.1085 11.1997 18.955 12.758 18.3684 14.1741C17.7818 15.5903 16.7885 16.8006 15.514 17.6522C14.2395 18.5038 12.7411 18.9583 11.2083 18.9583C9.15291 18.9583 7.18167 18.1418 5.72826 16.6884C4.27485 15.235 3.45834 13.2638 3.45834 11.2083Z" fill="white"/>
+                        </svg>
+                        <input type="text" placeholder="Rechercher un produit...">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Tous nos vêtements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hommes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Femmes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Enfants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_action-research">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.7504 21.9163L19.3588 17.5375C20.7757 15.7323 21.5445 13.5032 21.5417 11.2083C21.5417 9.1646 20.9356 7.16675 19.8002 5.46744C18.6647 3.76814 17.0509 2.44369 15.1627 1.66158C13.2746 0.879477 11.1969 0.674843 9.1924 1.07356C7.18793 1.47227 5.34671 2.45643 3.90157 3.90157C2.45643 5.34671 1.47227 7.18793 1.07356 9.1924C0.674843 11.1969 0.879477 13.2746 1.66158 15.1627C2.44369 17.0509 3.76814 18.6647 5.46744 19.8002C7.16675 20.9356 9.1646 21.5417 11.2083 21.5417C13.5032 21.5445 15.7323 20.7757 17.5375 19.3588L21.9163 23.7504C22.0363 23.8715 22.1792 23.9676 22.3366 24.0332C22.494 24.0987 22.6628 24.1325 22.8333 24.1325C23.0039 24.1325 23.1727 24.0987 23.3301 24.0332C23.4875 23.9676 23.6303 23.8715 23.7504 23.7504C23.8715 23.6303 23.9676 23.4875 24.0332 23.3301C24.0987 23.1727 24.1325 23.0039 24.1325 22.8333C24.1325 22.6628 24.0987 22.494 24.0332 22.3366C23.9676 22.1792 23.8715 22.0363 23.7504 21.9163ZM3.45834 11.2083C3.45834 9.67553 3.91287 8.17715 4.76445 6.90267C5.61603 5.62819 6.82641 4.63485 8.24254 4.04827C9.65867 3.46169 11.2169 3.30822 12.7203 3.60725C14.2236 3.90629 15.6046 4.6444 16.6884 5.72826C17.7723 6.81212 18.5104 8.19303 18.8094 9.69639C19.1085 11.1997 18.955 12.758 18.3684 14.1741C17.7818 15.5903 16.7885 16.8006 15.514 17.6522C14.2395 18.5038 12.7411 18.9583 11.2083 18.9583C9.15291 18.9583 7.18167 18.1418 5.72826 16.6884C4.27485 15.235 3.45834 13.2638 3.45834 11.2083Z" fill="white"/>
+                </svg>
+                <input type="text" placeholder="Rechercher un produit...">
+            </div>
+            <div class="header_action-logo">
+                <a href="#"><img src="assets/logo-placeholder.svg" alt="Logo"></a>
+            </div>
+            <div class="header_action-userSupportShop">
+                <a href="#" id="support_icon">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.3229 0C5.52805 0 0 5.52805 0 12.3229V13.2027V17.2521V17.4283C0 18.6901 1.10536 19.7166 2.46458 19.7166H3.69687C4.37832 19.7166 4.92916 19.1646 4.92916 18.4843V12.1467C4.92916 11.4665 4.37832 10.9144 3.69687 10.9144H2.57795C3.2631 6.14543 7.36663 2.46458 12.3229 2.46458C17.2792 2.46458 21.3827 6.14543 22.0678 10.9144H20.9489C20.2675 10.9144 19.7166 11.4665 19.7166 12.1467V17.2521V18.4843V19.7166C19.7166 21.0758 18.6113 22.1812 17.2521 22.1812H14.7875V20.9489H9.85832V24.6458H12.3229H14.7875H17.2521C19.9705 24.6458 22.1812 22.4351 22.1812 19.7166C23.5404 19.7166 24.6458 18.6901 24.6458 17.4283V17.2521V13.2027V12.3229C24.6458 5.52805 19.1177 0 12.3229 0Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="#" id="user_icon"><img src="assets/person_icon.svg" alt="User Icon"></a>
+                <a href="#" id="shop-bag_icon"><img src="assets/shopping-bag_icon.svg" alt="Shopping Bag Icon"></a>
+            </div>
+        </div>
+        <nav class="header_nav">
+            <a href="#">Tous nos vêtements</a>
+            <a href="#">Hommes</a>
+            <a href="#">Femmes</a>
+            <a href="#">Enfants</a>
+            <a href="#">Promos</a>
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <section class="productsInfos">
+            <div class="productsInfos_Box">
+                <div class="productsInfos_Box_txt">
+                    <h2>Sweat pour homme</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur. Ornare ipsum mauris turpis quis fringilla varius eget. Faucibus aenean eu est placerat ullamcorper tincidunt. Dui vitae tincidunt congue felis quis. Enim non convallis congue turpis venenatis eget in lorem. Erat risus laoreet sit nulla. Erat tincidunt ut lacus nullam volutpat auctor.</p>
+                </div>
+                <div class="productsInfos_Box_img">
+                    <img src="assets/img-section-pagecollection.png" alt="image produit">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="productsList">
+            <div class="productsList_action">
+                <div class="productsList_action_select">
+                    <select name="trier" id="trier">
+                        <option value="defaut">Trier par défaut</option>
+                        <option value="defaut">Trier par prix croissant</option>
+                        <option value="defaut">Trier par prix décroissant</option>
+                    </select>
+                </div>
+                <div class="productsList_action_pagination">
+                    <p id="page1" class="active">1</p>
+                    <p id="page2">2</p>
+                    <p id="page3">3</p>
+                    <img src="assets/arrow-right.svg" alt="arrow-right">
+                </div>
+            </div>
+
+
+            <div class="productsList_list">
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+                <div class="productsList_list_card">
+                    <div class="productsList_list_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="productsList_list_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="productsList_list_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="productsList_list_card_evaluations">
+                        <div class="productsList_list_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                    <div class="productsList_list_card_btn">
+                        <a href="#">Voir le produit</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="productsList_action">
+                <div class="productsList_action_select">
+                    <select name="trier" id="trier">
+                        <option value="defaut">Trier par défaut</option>
+                        <option value="defaut">Trier par prix croissant</option>
+                        <option value="defaut">Trier par prix décroissant</option>
+                    </select>
+                </div>
+                <div class="productsList_action_pagination">
+                    <p id="page1" class="active">1</p>
+                    <p id="page2">2</p>
+                    <p id="page3">3</p>
+                    <img src="assets/arrow-right.svg" alt="arrow-right">
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+        
+    </main>
+
+    <footer>
+        <div class="footer_logo">
+            <img src="assets/logo-placeholder.svg" alt="logo">
+        </div>
+        <div class="footer_linksContact">
+            <div class="footer_linksContact_infos">
+                <p><strong>Adresse de la boutique</strong></p>
+                <p>24 rue de l'adresse</p>
+                <p>33000 Bordeaux</p>
+                <br>
+                <p><strong>Support : </strong>+33 12 34 56 78</p>
+                <p><strong>Email : </strong>contact@boutique.com</p>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Nos produits</a></li>
+                <li><a href="#">Catégories</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Suivi de commande</a></li>
+                <li><a href="#">Services clients</a></li>
+                <li><a href="#">Mon panier</a></li>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Conditions générales de ventes</a></li>
+                <li><a href="#">Politiques de Remboursements</a></li>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

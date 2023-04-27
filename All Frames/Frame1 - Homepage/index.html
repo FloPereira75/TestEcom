@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header_promo">
+            <p>Frais de port offerts jusqu'à minuit !</p>
+        </div>
+        <div class="header_action">
+            <div 
+            class="header_action_mobile_menu navbar-toggler" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar" 
+            aria-label="Toggle navigation">
+                <div class="header_action_mobile_menu_hamburger">
+                    <img src="assets/menu-ham.svg" alt="menu hamburger">
+                </div>
+                <p>Menu</p>
+            </div>
+            <div
+            class="offcanvas offcanvas-start" 
+            tabindex="-1" 
+            id="offcanvasNavbar" 
+            aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <div class="header_action_mobile-research">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.7504 21.9163L19.3588 17.5375C20.7757 15.7323 21.5445 13.5032 21.5417 11.2083C21.5417 9.1646 20.9356 7.16675 19.8002 5.46744C18.6647 3.76814 17.0509 2.44369 15.1627 1.66158C13.2746 0.879477 11.1969 0.674843 9.1924 1.07356C7.18793 1.47227 5.34671 2.45643 3.90157 3.90157C2.45643 5.34671 1.47227 7.18793 1.07356 9.1924C0.674843 11.1969 0.879477 13.2746 1.66158 15.1627C2.44369 17.0509 3.76814 18.6647 5.46744 19.8002C7.16675 20.9356 9.1646 21.5417 11.2083 21.5417C13.5032 21.5445 15.7323 20.7757 17.5375 19.3588L21.9163 23.7504C22.0363 23.8715 22.1792 23.9676 22.3366 24.0332C22.494 24.0987 22.6628 24.1325 22.8333 24.1325C23.0039 24.1325 23.1727 24.0987 23.3301 24.0332C23.4875 23.9676 23.6303 23.8715 23.7504 23.7504C23.8715 23.6303 23.9676 23.4875 24.0332 23.3301C24.0987 23.1727 24.1325 23.0039 24.1325 22.8333C24.1325 22.6628 24.0987 22.494 24.0332 22.3366C23.9676 22.1792 23.8715 22.0363 23.7504 21.9163ZM3.45834 11.2083C3.45834 9.67553 3.91287 8.17715 4.76445 6.90267C5.61603 5.62819 6.82641 4.63485 8.24254 4.04827C9.65867 3.46169 11.2169 3.30822 12.7203 3.60725C14.2236 3.90629 15.6046 4.6444 16.6884 5.72826C17.7723 6.81212 18.5104 8.19303 18.8094 9.69639C19.1085 11.1997 18.955 12.758 18.3684 14.1741C17.7818 15.5903 16.7885 16.8006 15.514 17.6522C14.2395 18.5038 12.7411 18.9583 11.2083 18.9583C9.15291 18.9583 7.18167 18.1418 5.72826 16.6884C4.27485 15.235 3.45834 13.2638 3.45834 11.2083Z" fill="white"/>
+                        </svg>
+                        <input type="text" placeholder="Rechercher un produit...">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Tous nos vêtements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hommes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Femmes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Enfants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_action-research">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.7504 21.9163L19.3588 17.5375C20.7757 15.7323 21.5445 13.5032 21.5417 11.2083C21.5417 9.1646 20.9356 7.16675 19.8002 5.46744C18.6647 3.76814 17.0509 2.44369 15.1627 1.66158C13.2746 0.879477 11.1969 0.674843 9.1924 1.07356C7.18793 1.47227 5.34671 2.45643 3.90157 3.90157C2.45643 5.34671 1.47227 7.18793 1.07356 9.1924C0.674843 11.1969 0.879477 13.2746 1.66158 15.1627C2.44369 17.0509 3.76814 18.6647 5.46744 19.8002C7.16675 20.9356 9.1646 21.5417 11.2083 21.5417C13.5032 21.5445 15.7323 20.7757 17.5375 19.3588L21.9163 23.7504C22.0363 23.8715 22.1792 23.9676 22.3366 24.0332C22.494 24.0987 22.6628 24.1325 22.8333 24.1325C23.0039 24.1325 23.1727 24.0987 23.3301 24.0332C23.4875 23.9676 23.6303 23.8715 23.7504 23.7504C23.8715 23.6303 23.9676 23.4875 24.0332 23.3301C24.0987 23.1727 24.1325 23.0039 24.1325 22.8333C24.1325 22.6628 24.0987 22.494 24.0332 22.3366C23.9676 22.1792 23.8715 22.0363 23.7504 21.9163ZM3.45834 11.2083C3.45834 9.67553 3.91287 8.17715 4.76445 6.90267C5.61603 5.62819 6.82641 4.63485 8.24254 4.04827C9.65867 3.46169 11.2169 3.30822 12.7203 3.60725C14.2236 3.90629 15.6046 4.6444 16.6884 5.72826C17.7723 6.81212 18.5104 8.19303 18.8094 9.69639C19.1085 11.1997 18.955 12.758 18.3684 14.1741C17.7818 15.5903 16.7885 16.8006 15.514 17.6522C14.2395 18.5038 12.7411 18.9583 11.2083 18.9583C9.15291 18.9583 7.18167 18.1418 5.72826 16.6884C4.27485 15.235 3.45834 13.2638 3.45834 11.2083Z" fill="white"/>
+                </svg>
+                <input type="text" placeholder="Rechercher un produit...">
+            </div>
+            <div class="header_action-logo">
+                <a href="#"><img src="assets/logo-placeholder.svg" alt="Logo"></a>
+            </div>
+            <div class="header_action-userSupportShop">
+                <a href="#" id="support_icon">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.3229 0C5.52805 0 0 5.52805 0 12.3229V13.2027V17.2521V17.4283C0 18.6901 1.10536 19.7166 2.46458 19.7166H3.69687C4.37832 19.7166 4.92916 19.1646 4.92916 18.4843V12.1467C4.92916 11.4665 4.37832 10.9144 3.69687 10.9144H2.57795C3.2631 6.14543 7.36663 2.46458 12.3229 2.46458C17.2792 2.46458 21.3827 6.14543 22.0678 10.9144H20.9489C20.2675 10.9144 19.7166 11.4665 19.7166 12.1467V17.2521V18.4843V19.7166C19.7166 21.0758 18.6113 22.1812 17.2521 22.1812H14.7875V20.9489H9.85832V24.6458H12.3229H14.7875H17.2521C19.9705 24.6458 22.1812 22.4351 22.1812 19.7166C23.5404 19.7166 24.6458 18.6901 24.6458 17.4283V17.2521V13.2027V12.3229C24.6458 5.52805 19.1177 0 12.3229 0Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="#" id="user_icon"><img src="assets/person_icon.svg" alt="User Icon"></a>
+                <a href="#" id="shop-bag_icon"><img src="assets/shopping-bag_icon.svg" alt="Shopping Bag Icon"></a>
+            </div>
+        </div>
+        <nav class="header_nav">
+            <a href="#">Tous nos vêtements</a>
+            <a href="#">Hommes</a>
+            <a href="#">Femmes</a>
+            <a href="#">Enfants</a>
+            <a href="#">Promos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="performancedesign">
+            <div class="performancedesign_txt">
+                <h1>High-Performance<br>& Elegant Design</h1>
+                <a href="#">Découvrir</a>
+            </div>
+            <div class="performancedesign_illustration">
+                <img class="img-fluid" src="assets/img-section-hero-nobg.png" alt="Illustration">
+            </div>
+        </section>
+        
+        <section class="collections">
+            <div class="collections_head">
+                <h2>Nos Collections</h2>
+                <p>Lorem ipsum indolor sit amet deserunt ulluamco</p>
+            </div>
+            <div class="collections_cards">
+                <div class="collections_cards_card">
+                    <img class="card-illustration" src="assets/img-cards-collection-homme.png" alt="Illustration collection hommes">
+                    <div class="collections_cards_card_box">
+                        <div class="collections_cards_card_box_txt">
+                            <p>Hommes</p>
+                            <div class="collections_cards_card_box_txt_arrow">
+                                <img src="assets/arrow-right.svg" alt="arrow-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collections_cards_card">
+                    <img class="card-illustration" src="assets/img-cards-collection-femmes.png" alt="Illustration collection femmes">
+                    <div class="collections_cards_card_box">
+                        <div class="collections_cards_card_box_txt">
+                            <p>Femmes</p>
+                            <div class="collections_cards_card_box_txt_arrow">
+                                <img src="assets/arrow-right.svg" alt="arrow-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collections_cards_card">
+                    <img class="card-illustration" src="assets/img-cards-collection-enfants.png" alt="Illustration collection enfants">
+                    <div class="collections_cards_card_box">
+                        <div class="collections_cards_card_box_txt">
+                            <p>Enfants</p>
+                            <div class="collections_cards_card_box_txt_arrow">
+                                <img src="assets/arrow-right.svg" alt="arrow-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="collections_btn" href="#">Voir plus de collections</a>
+        </section>
+
+        <section class="new">
+            <div class="new_head">
+                <div class="new_head_txt">
+                    <h2>Nouveauté 2023</h2>
+                    <p>Lorem ipsum indolor sit amet deserunt ulluamco</p>
+                </div>
+                <a href="#" class="new_head_btn">Voir tout <img src="assets/arrow-right.svg" alt="arrow-right"></a>
+            </div>
+            <div class="new_products">
+                <div class="new_products_card">
+                    <div class="new_products_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="new_products_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="new_products_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="new_products_card_evaluations">
+                        <div class="new_products_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                </div>
+                <div class="new_products_card">
+                    <div class="new_products_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="new_products_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="new_products_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="new_products_card_evaluations">
+                        <div class="new_products_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                </div>
+                <div class="new_products_card">
+                    <div class="new_products_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="new_products_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="new_products_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="new_products_card_evaluations">
+                        <div class="new_products_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                </div>
+                <div class="new_products_card">
+                    <div class="new_products_card_img">
+                        <img src="assets/img-produit1.png" alt="image produit">
+                        <div class="card_img_like">
+                            <img src="assets/icon-like-produit.svg" alt="like image">
+                        </div>
+                    </div>
+                    <div class="new_products_card_namePrice">
+                        <p>T shirt Yellow</p>
+                        <p>29.99 €</p>
+                    </div>
+                    <div class="new_products_card_description">
+                        <p>Description rapide du produit...</p>
+                    </div>
+                    <div class="new_products_card_evaluations">
+                        <div class="new_products_card_evaluations_stars">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_plain.svg" alt="star evaluation">
+                            <img src="assets/star_empty.svg" alt="star evaluation">
+                        </div>
+                        <p>(121 avis)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="avisClients">
+            <div class="avisClients_head">
+                <div class="avisClients_head_txt">
+                    <h2>L'avis de nos clients</h2>
+                    <p>Ne nous croyez pas sur parole. Faites confiance à nos clients !</p>
+                </div>
+                <div class="avisClients_head_action">
+                    <p class="precedentBtn">
+                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1.91L3.05533 6.5L8 11.09L6.47773 12.5L5.24537e-07 6.5L6.47773 0.5L8 1.91Z" fill="var(--kaki)"/>
+                        </svg>
+                        Précédent                           
+                    </p>
+                    <p class="suivantBtn">
+                        Suivant
+                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11.2848L4.94467 6.69482L0 2.10482L1.52227 0.694824L8 6.69482L1.52227 12.6948L0 11.2848Z" fill="var(--kaki)"/>
+                        </svg>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="avisClients_cards">
+                <div class="avisClients_cards_card">
+                    <div class="avisClients_cards_card_head">
+                        <h3>Mon mari adore !</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam...</p>
+                    </div>
+                    <div class="avisClients_cards_card_client">
+                        <div class="client_photo">
+                            <img src="assets/img-client3.png" alt="image client">
+                        </div>
+                        <div class="client_nomAvis">
+                            <p>Elise B.</p>
+                            <div class="client_nomAvis_star">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_empty.svg" alt="star evaluation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="avisClients_cards_card">
+                    <div class="avisClients_cards_card_head">
+                        <h3>Le meilleur T-shirt !</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                    <div class="avisClients_cards_card_client">
+                        <div class="client_photo">
+                            <img src="assets/img-client1.png" alt="image client">
+                        </div>
+                        <div class="client_nomAvis">
+                            <p>Julien M.</p>
+                            <div class="client_nomAvis_star">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_empty.svg" alt="star evaluation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="avisClients_cards_card">
+                    <div class="avisClients_cards_card_head">
+                        <h3>Parfait mais...</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam...</p>
+                    </div>
+                    <div class="avisClients_cards_card_client">
+                        <div class="client_photo">
+                            <img src="assets/img-client2.png" alt="image client">
+                        </div>
+                        <div class="client_nomAvis">
+                            <p>Elise B.</p>
+                            <div class="client_nomAvis_star">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_plain.svg" alt="star evaluation">
+                                <img src="assets/star_empty.svg" alt="star evaluation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="dots-slider">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="quiSommesNous">
+            <div class="quiSommesNous_Box">
+                <div class="quiSommesNous_Box_txt">
+                    <h2>Qui sommes-nous ?</h2>
+                    <p>
+                        <span>Lorem ipsum dolor sit amet consectetur. Malesuada condimentum erat odio habitant id magna viverra augue eget. Urna nunc malesuada.</span>
+                        <br><br>
+                        Anisl dignissim ornare cras. Arcu in nulla tincidunt lectus ac. Vitae velit in ut in dui. Est odio quis auctor eu consequat. Lorem arcu elementum dui fringilla sit id ut. Faucibus sapien lectus magna nunc scelerisque netus quam dictum gravida. Est consequat purus sapien tincidunt vestibulum nisl. Consectetur at nisi parturient semper. 
+                    </p>
+                    <a href="#" class="quiSommesNous_btn">
+                        En savoir plus 
+                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11.2848L4.94467 6.69482L0 2.10482L1.52227 0.694824L8 6.69482L1.52227 12.6948L0 11.2848Z" fill="var(--kaki)"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="quiSommesNous_Box_illustration">
+                    <img src="assets/img-section-quisommesnous.png" alt="Illustration">
+                </div>
+            </div>
+        </section>
+
+        <section class="savInfo">
+            <div class="savInfo_Box">
+                <div class="savInfo_Box_icon">
+                    <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="43" cy="43" r="42.5" stroke="white"/>
+                        <path d="M64.85 50.4375H63.7V42.6256C63.7 41.7078 63.3334 40.8262 62.6866 40.1758L55.5062 32.9564C54.8594 32.3061 53.9825 31.9375 53.0697 31.9375H49.9V28.4688C49.9 26.5537 48.3547 25 46.45 25H28.05C26.1453 25 24.6 26.5537 24.6 28.4688V31.9375H20.575C20.2587 31.9375 20 32.1977 20 32.5156V33.6719C20 33.9898 20.2587 34.25 20.575 34.25H40.125C40.4412 34.25 40.7 34.5102 40.7 34.8281V35.9844C40.7 36.3023 40.4412 36.5625 40.125 36.5625H22.875C22.5587 36.5625 22.3 36.8227 22.3 37.1406V38.2969C22.3 38.6148 22.5587 38.875 22.875 38.875H37.825C38.1412 38.875 38.4 39.1352 38.4 39.4531V40.6094C38.4 40.9273 38.1412 41.1875 37.825 41.1875H20.575C20.2587 41.1875 20 41.4477 20 41.7656V42.9219C20 43.2398 20.2587 43.5 20.575 43.5H35.525C35.8412 43.5 36.1 43.7602 36.1 44.0781V45.2344C36.1 45.5523 35.8412 45.8125 35.525 45.8125H24.6V55.0625C24.6 58.8926 27.6906 62 31.5 62C35.3094 62 38.4 58.8926 38.4 55.0625H47.6C47.6 58.8926 50.6906 62 54.5 62C58.3094 62 61.4 58.8926 61.4 55.0625H64.85C65.4825 55.0625 66 54.5422 66 53.9062V51.5938C66 50.9578 65.4825 50.4375 64.85 50.4375ZM31.5 58.5312C29.5953 58.5312 28.05 56.9775 28.05 55.0625C28.05 53.1475 29.5953 51.5938 31.5 51.5938C33.4047 51.5938 34.95 53.1475 34.95 55.0625C34.95 56.9775 33.4047 58.5312 31.5 58.5312ZM54.5 58.5312C52.5953 58.5312 51.05 56.9775 51.05 55.0625C51.05 53.1475 52.5953 51.5938 54.5 51.5938C56.4047 51.5938 57.95 53.1475 57.95 55.0625C57.95 56.9775 56.4047 58.5312 54.5 58.5312ZM60.25 43.5H49.9V35.4062H53.0697L60.25 42.6256V43.5Z" fill="white"/>
+                    </svg>
+                </div>
+                <p>Livraison avec suivi gratuite en europe</p>
+            </div>
+            <div class="savInfo_Box">
+                <div class="savInfo_Box_icon">
+                    <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="43" cy="43" r="42.5" stroke="white"/>
+                        <path d="M58.8836 36.4327C57.91 34.1036 59.6091 29.9227 57.8527 28.1664C56.0964 26.41 51.9155 28.1091 49.5864 27.1355C47.3336 26.1809 45.5964 22 43 22C40.4036 22 38.6664 26.1809 36.4327 27.1164C34.0845 28.09 29.9036 26.3909 28.1473 28.1473C26.3909 29.9036 28.09 34.0845 27.1164 36.4327C26.1809 38.6664 22 40.4036 22 43C22 45.5964 26.1809 47.3336 27.1164 49.5673C28.09 51.8964 26.3909 56.0773 28.1473 57.8336C29.9036 59.59 34.0845 57.8909 36.4136 58.8645C38.6664 59.8191 40.4036 64 43 64C45.5964 64 47.3336 59.8191 49.5673 58.8836C51.8964 57.91 56.0773 59.6091 57.8336 57.8527C59.59 56.0964 57.8909 51.9155 58.8645 49.5864C59.8191 47.3336 64 45.5964 64 43C64 40.4036 59.8191 38.6664 58.8836 36.4327ZM41.0909 51.4191L34.0082 44.3364L36.7 41.6445L41.0909 46.0355L51.19 35.9364L53.8818 38.6282L41.0909 51.4191Z" fill="white"/>
+                    </svg>                        
+                </div>
+                <p>14 jours satisfait ou remboursé</p>
+            </div>
+            <div class="savInfo_Box">
+                <div class="savInfo_Box_icon">
+                    <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="43" cy="43" r="42.5" stroke="white"/>
+                        <path d="M55.2383 45.5967L47.6 51.7222H37.35V49.6667H45.6832C46.5012 49.6667 46.9911 48.7519 46.536 48.0695L44.7157 45.3315C43.9572 44.1866 42.678 43.5 41.3065 43.5H37.35H25.05C23.9164 43.5 23 44.4188 23 45.5556V57.8889C23 60.1582 24.8368 62 27.1 62H46.8599C48.6332 62 50.3204 61.2333 51.4888 59.8951L64 45.5556L61.0234 44.5607C59.0451 43.8988 56.868 44.2893 55.2383 45.5967ZM58.3789 34.0239C59.3034 33.0681 59.8754 31.7463 59.8754 30.2869C59.8754 28.8274 59.3034 27.5057 58.3789 26.5499C57.4543 25.592 56.1751 25 54.7627 25C54.7627 25 52.2125 24.9938 49.65 27.6434C47.0875 24.9938 44.5373 25 44.5373 25C43.1248 25 41.8456 25.592 40.9211 26.5478C39.9965 27.5057 39.4246 28.8254 39.4246 30.2848C39.4246 31.7443 39.9965 33.0681 40.9211 34.0218L49.65 43.5L58.3789 34.0239Z" fill="white"/>
+                    </svg>                        
+                </div>
+                <p>Produit fait avec beaucoup d'amour</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_logo">
+            <img src="assets/logo-placeholder.svg" alt="logo">
+        </div>
+        <div class="footer_linksContact">
+            <div class="footer_linksContact_infos">
+                <p><strong>Adresse de la boutique</strong></p>
+                <p>24 rue de l'adresse</p>
+                <p>33000 Bordeaux</p>
+                <br>
+                <p><strong>Support : </strong>+33 12 34 56 78</p>
+                <p><strong>Email : </strong>contact@boutique.com</p>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Nos produits</a></li>
+                <li><a href="#">Catégories</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Suivi de commande</a></li>
+                <li><a href="#">Services clients</a></li>
+                <li><a href="#">Mon panier</a></li>
+            </div>
+            <div class="footer_linksContact_nav">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Conditions générales de ventes</a></li>
+                <li><a href="#">Politiques de Remboursements</a></li>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
