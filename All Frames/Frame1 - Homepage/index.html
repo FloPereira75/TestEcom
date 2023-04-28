@@ -84,13 +84,65 @@
                 <a href="#" id="shop-bag_icon"><img src="assets/shopping-bag_icon.svg" alt="Shopping Bag Icon"></a>
             </div>
         </div>
-        <nav class="header_nav">
+
+
+        
+        <nav class="header_nav dropdown">
             <a href="#">Tous nos vêtements</a>
-            <a href="#">Hommes</a>
-            <a href="#">Femmes</a>
-            <a href="#">Enfants</a>
+            <div class="header_nav_box">
+                <a 
+                    href="#" 
+                    class="dropdown-toggle" 
+                    type="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                >
+                    Hommes
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item" type="button">Item 1</a></li>
+                  <li><a href="#" class="dropdown-item" type="button">Item 2</a></li>
+                  <li><a href="#" class="dropdown-item" type="button">Item 3</a></li>
+                </ul>
+            </div>
+            <div class="header_nav_box">
+                <a 
+                    href="#" 
+                    class="dropdown-toggle" 
+                    type="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                >
+                    Femmes
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item" type="button">Item 1</a></li>
+                    <li><a href="#" class="dropdown-item" type="button">Item 2</a></li>
+                    <li><a href="#" class="dropdown-item" type="button">Item 3</a></li>
+                </ul>
+            </div>
+            <div class="header_nav_box">
+                <a 
+                    href="#" 
+                    class="dropdown-toggle" 
+                    type="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                >
+                    Enfants
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item" type="button">Item 1</a></li>
+                    <li><a href="#" class="dropdown-item" type="button">Item 2</a></li>
+                    <li><a href="#" class="dropdown-item" type="button">Item 3</a></li>
+                </ul>
+            </div>
             <a href="#">Promos</a>
         </nav>
+
+
+
+
     </header>
 
     <main>
@@ -269,13 +321,13 @@
                     <p>Ne nous croyez pas sur parole. Faites confiance à nos clients !</p>
                 </div>
                 <div class="avisClients_head_action">
-                    <p class="precedentBtn">
+                    <p class="avisClients_head_action_btn">
                         <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 1.91L3.05533 6.5L8 11.09L6.47773 12.5L5.24537e-07 6.5L6.47773 0.5L8 1.91Z" fill="var(--kaki)"/>
                         </svg>
                         Précédent                           
                     </p>
-                    <p class="suivantBtn">
+                    <p class="avisClients_head_action_btn active">
                         Suivant
                         <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 11.2848L4.94467 6.69482L0 2.10482L1.52227 0.694824L8 6.69482L1.52227 12.6948L0 11.2848Z" fill="var(--kaki)"/>

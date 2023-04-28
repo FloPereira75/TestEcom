@@ -125,6 +125,27 @@ header {
     line-height: 28px;
 }
 
+.header_nav_box .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_nav_box .dropdown-toggle::after {
+    content: "";
+    height: 6px;
+    width: 11px;
+    background-image: url(assets/icon-arrow.svg);
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    margin-left: 0;
+}
+
+.dropdown-menu li a {
+    font-weight: 400;
+}
+
 /* MAIN */
 
 main {

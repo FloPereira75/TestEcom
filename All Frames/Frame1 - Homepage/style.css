@@ -125,6 +125,27 @@ header {
     line-height: 28px;
 }
 
+.header_nav_box .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_nav_box .dropdown-toggle::after {
+    content: "";
+    height: 6px;
+    width: 11px;
+    background-image: url(assets/icon-arrow.svg);
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    margin-left: 0;
+}
+
+.dropdown-menu li a {
+    font-weight: 400;
+}
+
 /* MAIN */
 
 main {
@@ -436,7 +457,7 @@ main {
     gap: 20px;
 }
 
-.precedentBtn {
+.avisClients_head_action_btn {
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -453,19 +474,8 @@ main {
     cursor: not-allowed;
 }
 
-.suivantBtn {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    gap: 10px;
-    height: 43px;
-    border: 1.33686px solid var(--kaki);
-    border-radius: 55px;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--kaki);
+.avisClients_head_action_btn.active {
+    opacity: 1;
     cursor: pointer;
 }
 
