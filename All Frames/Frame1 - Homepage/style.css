@@ -1,8 +1,18 @@
 :root {
+    /* Color */
     --kaki: #7A866A;
+    --kaki-light: hsla(86, 12%, 47%, 0.2);
+
+    --red: #EA3327;
+    --red-light: hsla(339, 57%, 72%, 0.2);
+
+    --pink: #E190AC;
+    --pink-light: hsla(339, 57%, 72%, 0.2);
+
+    /* Var */
+    --color-principal: var(--kaki); /* (header, titre, buttons, svg, footer links) */
+    --footer-bckg: var(--kaki-light);
 }
-
-
 
 *, ::before, ::after {
     margin: 0;
@@ -25,9 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /* HEADER */
 
 header {
@@ -39,7 +46,7 @@ header {
 .header_promo {
     width: 100%;
     height: 44px;
-    background: var(--kaki);
+    background: var(--color-principal);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,6 +62,7 @@ header {
 
 .header_action {
     position: relative;
+    height: 94px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -72,7 +80,7 @@ header {
 }
 
 .header_action-research svg path {
-    fill: var(--kaki);
+    fill: var(--color-principal);
 }
 
 .header_action-research input {
@@ -98,13 +106,20 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.header_action-logo a svg path {
+    fill: var(--color-principal);
+}
+
 .header_action-userSupportShop {
     display: flex;
     gap: 25px;
 }
 
-.header_action-userSupportShop a svg path {
-    fill: var(--kaki);
+#support_icon svg path{
+    fill: var(--color-principal);
+}
+#user_icon svg path, #shop-bag_icon svg path {
+    stroke: var(--color-principal);
 }
 
 .header_nav {
@@ -118,7 +133,7 @@ header {
 }
 
 .header_nav a {
-    color: var(--kaki);
+    color: var(--color-principal);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -131,7 +146,7 @@ header {
     gap: 10px;
 }
 
-.header_nav_box .dropdown-toggle::after {
+/* .header_nav_box .dropdown-toggle::after {
     content: "";
     height: 6px;
     width: 11px;
@@ -140,7 +155,7 @@ header {
     background-size: cover;
     border: 0;
     margin-left: 0;
-}
+} */
 
 .dropdown-menu li a {
     font-weight: 400;
@@ -148,9 +163,6 @@ header {
 
 /* MAIN */
 
-main {
-
-}
 
 /* PERFOMANCEDESIGN */
 
@@ -168,7 +180,7 @@ main {
 }
 
 .performancedesign_txt h1 {
-    color: var(--kaki);
+    color: var(--color-principal);
     font-size: 53px;
     font-weight: 700;
     line-height: 66px;
@@ -177,7 +189,7 @@ main {
 
 .performancedesign_txt a {
     width: 226px;
-    background: var(--kaki);
+    background: var(--color-principal);
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 700;
@@ -212,7 +224,7 @@ main {
     font-size: 35px;
     line-height: 52px;
     letter-spacing: 0.02em;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .collections_head p {
@@ -276,14 +288,14 @@ main {
 }
 
 .collections_btn {
-    background: var(--kaki);
+    background: var(--color-principal);
     color: #FFFFFF;
     font-size: 12px;
     font-weight: 700;
     padding: 15px 30px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid var(--kaki);
+    border: 1px solid var(--color-principal);
     border-radius: 83px;
 }
 
@@ -313,7 +325,7 @@ main {
     font-size: 35px;
     line-height: 52px;
     letter-spacing: 0.02em;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .new_head_txt p {
@@ -328,8 +340,8 @@ main {
     padding: 11px 20px;
     gap: 10px;
     height: 40px;
-    background: #7A866A;
-    border: 1px solid #7A866A;
+    background: var(--color-principal);
+    border: 1px solid var(--color-principal);
     border-radius: 83px;
     font-weight: 700;
     font-size: 12px;
@@ -397,7 +409,7 @@ main {
     font-weight: 700;
     font-size: 17px;
     line-height: 32px;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .productsList_list_card_description p {
@@ -408,8 +420,21 @@ main {
 
 .productsList_list_card_evaluations {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 10px;
+}
+
+.productsList_list_card_evaluations_stars {
+    display: flex;
+    gap: 5px;
+}
+
+.productsList_list_card_evaluations_stars svg path {
+    fill: #D9D9D9;
+}
+
+.productsList_list_card_evaluations_stars svg.active path {
+    fill: var(--color-principal);
 }
 
 .productsList_list_card_evaluations p {
@@ -417,8 +442,6 @@ main {
     line-height: 32px;
     color: #868686;
 }
-
-
 
 /* AVIS CLIENT */
 
@@ -443,7 +466,7 @@ main {
     font-size: 35px;
     line-height: 52px;
     letter-spacing: 0.02em;
-    color: var(--kaki)
+    color: var(--color-principal)
 }
 
 .avisClients_head_txt p {
@@ -464,19 +487,23 @@ main {
     gap: 10px;
     height: 43px;
     opacity: 0.4;
-    border: 1.33686px solid var(--kaki);
+    border: 1.33686px solid var(--color-principal);
     border-radius: 55px;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: var(--kaki);
+    color: var(--color-principal);
     cursor: not-allowed;
 }
 
 .avisClients_head_action_btn.active {
     opacity: 1;
     cursor: pointer;
+}
+
+.avisClients_head_action_btn svg path {
+    fill: var(--color-principal);
 }
 
 .avisClients_cards {
@@ -526,12 +553,11 @@ main {
     align-items: center;
 }
 
-.avisClients_cards_card:nth-child(1) {
-
-}
-
 .client_nomAvis {
-    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
 }
 
 .client_nomAvis p {
@@ -543,9 +569,22 @@ main {
     color: #868686;
 }
 
-.client_nomAvis_star img {
+.client_nomAvis_star {
+    display: flex;
+    gap: 5px;
+}
+
+.client_nomAvis_star svg {
     width: 20px;
     height: 20px;
+}
+
+.client_nomAvis_star svg path {
+    fill: #D9D9D9;
+}
+
+.client_nomAvis_star svg.active path {
+    fill: var(--color-principal);
 }
 
 .dots-slider {
@@ -564,7 +603,7 @@ main {
 }
 
 .dots-slider span.active {
-    background: var(--kaki);
+    background: var(--color-principal);
 }
 
 /* QUI SOMMES NOUS */
@@ -594,7 +633,7 @@ main {
     font-size: 35px;
     line-height: 52px;
     letter-spacing: 0.02em;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .quiSommesNous_Box_txt p {
@@ -615,7 +654,7 @@ main {
     padding: 15px;
     width: 203px;
     height: 53px;
-    border: 1.33686px solid var(--kaki);
+    border: 1.33686px solid var(--color-principal);
     border-radius: 55px;
     font-weight: 700;
     font-size: 14px;
@@ -623,7 +662,10 @@ main {
     letter-spacing: 0.07em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--kaki);
+    color: var(--color-principal);
+}
+.quiSommesNous_btn svg path {
+    fill: var(--color-principal);
 }
 
 /* Sav Infos */
@@ -642,15 +684,11 @@ main {
     gap: 25px;
 }
 
-.savInfo_Box_icon {
-
-}
-
 .savInfo_Box_icon svg path {
-    fill: var(--kaki);
+    fill: var(--color-principal);
 }
 .savInfo_Box_icon svg circle {
-    stroke: var(--kaki);
+    stroke: var(--color-principal);
 }
 
 .savInfo_Box p {
@@ -660,14 +698,18 @@ main {
     line-height: 18px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 /* FOOTER */
 
 footer {
-    background: rgba(122, 134, 106, 0.2);
+    background: var(--footer-bckg);
     padding: 2.9% 20% 3.68%;
+}
+
+.footer_logo svg path {
+    fill: var(--color-principal);
 }
 
 .footer_linksContact {
@@ -679,7 +721,7 @@ footer {
 .footer_linksContact_infos {
     font-size: 15px;
     line-height: 22px;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .footer_linksContact_nav {
@@ -694,7 +736,7 @@ footer {
 
 .footer_linksContact_nav li a {
     font-size: 15px;
-    color: var(--kaki);
+    color: var(--color-principal);
     text-decoration: none;
 }
 
@@ -728,7 +770,7 @@ footer {
     }
 
     .header_action_mobile-research svg path {
-        fill: var(--kaki);
+        fill: var(--color-principal);
     }
 
     .header_action_mobile-research input {
@@ -758,7 +800,7 @@ footer {
         display: none;
     }
 
-    .header_action-logo a img {
+    .header_action-logo a svg {
         width: 125px;
     }
 
@@ -786,7 +828,6 @@ footer {
     }
     .performancedesign_illustration img {
         width: 100%;
-        height: 400px;
     }
 
     .collections {
@@ -799,13 +840,16 @@ footer {
     }
     .collections_cards_card {
         width: 100%;
+        height: 400px;
     }
     .card-illustration {
         width: 100%;
-        height: 527px;
+        height: 400px;
     }
     .collections_cards_card_box {
         width: 100%;
+        bottom: 0;
+        top: initial;
     }
 
     .new {
@@ -887,7 +931,7 @@ footer {
         text-align: center;
     }
 
-    .footer_logo img {
+    .footer_logo svg {
         width: 125px;
     }
 
@@ -929,12 +973,6 @@ footer {
     .new {
         padding: 2.5% 7.5%;
     }
-
-
-
-
-    
-    
     .avisClients {
         padding: 5% 7.5%;
     }
@@ -981,9 +1019,6 @@ footer {
     .new {
         padding: 3.75% 10%;
     }
-    
-    
-    
     .avisClients {
         padding: 5% 10%;
     }

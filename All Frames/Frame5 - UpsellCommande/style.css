@@ -1,5 +1,17 @@
 :root {
+    /* Color */
     --kaki: #7A866A;
+    --kaki-light: hsla(86, 12%, 47%, 0.2);
+
+    --red: #EA3327;
+    --red-light: hsla(339, 57%, 72%, 0.2);
+
+    --pink: #E190AC;
+    --pink-light: hsla(339, 57%, 72%, 0.2);
+
+    /* Var */
+    --color-principal: var(--kaki); /* (header, titre, buttons, svg, footer links) */
+    --footer-bckg: var(--kaki-light);
 }
 
 
@@ -25,9 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /* HEADER */
 
 header {
@@ -39,7 +48,7 @@ header {
 .header_promo {
     width: 100%;
     height: 44px;
-    background: var(--kaki);
+    background: var(--color-principal);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,6 +67,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header_logo a svg path {
+    fill: var(--color-principal);
 }
 
 /* MAIN */
@@ -109,10 +122,6 @@ main {
     gap: 35px;
 }
 
-.commande_Box_content_head {
-
-}
-
 .commande_Box_content_head_promo {
     position: relative;
     display: flex;
@@ -142,9 +151,13 @@ main {
     color: #fff;
 }
 
-.commande_Box_content_head_promo img {
+.commande_Box_content_head_promo svg {
     position: absolute;
     right: -91px;
+}
+
+.commande_Box_content_head_promo svg path {
+    fill: var(--color-principal);
 }
 
 .commande_Box_content_head p {
@@ -155,16 +168,12 @@ main {
     color: #1F1F23;
 }
 
-.commande_Box_content_body {
-
-}
-
 .commande_Box_content_body > p:first-child {
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.02em;
-    color: #7A866A;
+    color: var(--color-principal);
 }
 
 .commande_Box_content_body_list {
@@ -181,6 +190,10 @@ main {
     gap: 10px;
 }
 
+.commande_Box_content_body_list_box svg path {
+    fill: var(--color-principal);
+}
+
 .commande_box_btn {
     display: flex;
     justify-content: center;
@@ -188,7 +201,7 @@ main {
     gap: 5px;
     width: 278px;
     height: 49px;
-    background: #7A866A;
+    background: var(--color-principal);
     border-radius: 83px;
     font-weight: 700;
     font-size: 14px;
@@ -228,24 +241,28 @@ main {
     align-items: center;
     width: 380px;
     height: 49px;
-    border: 1px solid #7A866A;
+    border: 1px solid var(--color-principal);
     border-radius: 31px;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: #7A866A;
+    color: var(--color-principal);
     margin: 40px auto 70px;
 }
 
 /* FOOTER */
 
 footer {
-    background: rgba(122, 134, 106, 0.2);
+    background: var(--footer-bckg);
     padding: 2.9% 20% 3.68%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer_logo svg path {
+    fill: var(--color-principal);
 }
 
 .footer_linksContact {
@@ -265,11 +282,9 @@ footer {
 
 .footer_linksContact_nav li a {
     font-size: 15px;
-    color: var(--kaki);
+    color: var(--color-principal);
     text-decoration: none;
 }
-
-
 
 /* SMALL MOBILE */
 
@@ -280,6 +295,10 @@ footer {
 
     .header_promo p {
         font-size: 14px;
+    }
+    
+    .header_logo svg {
+        width: 125px;
     }
 
     main {
@@ -320,7 +339,7 @@ footer {
         right: -15px;
     }
 
-    .commande_Box_content_head_promo img {
+    .commande_Box_content_head_promo svg {
         bottom: 50px;
         right: -31px;
     }
@@ -331,6 +350,10 @@ footer {
 
     .commande_Box_content_body_list {
         margin-left: initial;
+    }
+
+    .commande_box_btn {
+        margin: 0 auto;
     }
 
     .commande_btn_transp {
@@ -355,7 +378,7 @@ footer {
         text-align: center;
     }
 
-    .footer_logo img {
+    .footer_logo svg {
         width: 125px;
     }
     
@@ -376,7 +399,7 @@ footer {
         font-size: 14px;
     }
     
-    .header_logo img {
+    .header_logo svg {
         width: 125px;
     }
 
@@ -421,6 +444,10 @@ footer {
         margin-left: initial;
     }
 
+    .commande_box_btn {
+        margin: 0 auto;
+    }
+
     footer {
         padding: 10% 5%;
         flex-direction: column;
@@ -438,7 +465,7 @@ footer {
         text-align: center;
     }
 
-    .footer_logo img {
+    .footer_logo svg {
         width: 125px;
     }
     
@@ -465,6 +492,10 @@ footer {
         align-items: center;
     }
 
+    .commande_box_btn {
+        margin: 0 auto;
+    }
+
     footer {
         padding: 2.9% 5% 3.68%;
         gap: 30px;
@@ -489,6 +520,10 @@ footer {
     .commande_Box {
         flex-direction: column;
         align-items: center;
+    }
+
+    .commande_box_btn {
+        margin: 0 auto;
     }
 
     footer {

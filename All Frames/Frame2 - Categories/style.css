@@ -1,8 +1,18 @@
 :root {
+    /* Color */
     --kaki: #7A866A;
+    --kaki-light: hsla(86, 12%, 47%, 0.2);
+
+    --red: #EA3327;
+    --red-light: hsla(339, 57%, 72%, 0.2);
+
+    --pink: #E190AC;
+    --pink-light: hsla(339, 57%, 72%, 0.2);
+
+    /* Var */
+    --color-principal: var(--kaki); /* (header, titre, buttons, svg, footer links) */
+    --footer-bckg: var(--kaki-light);
 }
-
-
 
 *, ::before, ::after {
     margin: 0;
@@ -25,9 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /* HEADER */
 
 header {
@@ -39,7 +46,7 @@ header {
 .header_promo {
     width: 100%;
     height: 44px;
-    background: var(--kaki);
+    background: var(--color-principal);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,6 +62,7 @@ header {
 
 .header_action {
     position: relative;
+    height: 94px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -72,7 +80,7 @@ header {
 }
 
 .header_action-research svg path {
-    fill: var(--kaki);
+    fill: var(--color-principal);
 }
 
 .header_action-research input {
@@ -98,13 +106,20 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.header_action-logo a svg path {
+    fill: var(--color-principal);
+}
+
 .header_action-userSupportShop {
     display: flex;
     gap: 25px;
 }
 
-.header_action-userSupportShop a svg path {
-    fill: var(--kaki);
+#support_icon svg path{
+    fill: var(--color-principal);
+}
+#user_icon svg path, #shop-bag_icon svg path {
+    stroke: var(--color-principal);
 }
 
 .header_nav {
@@ -118,7 +133,7 @@ header {
 }
 
 .header_nav a {
-    color: var(--kaki);
+    color: var(--color-principal);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -131,7 +146,7 @@ header {
     gap: 10px;
 }
 
-.header_nav_box .dropdown-toggle::after {
+/* .header_nav_box .dropdown-toggle::after {
     content: "";
     height: 6px;
     width: 11px;
@@ -140,7 +155,7 @@ header {
     background-size: cover;
     border: 0;
     margin-left: 0;
-}
+} */
 
 .dropdown-menu li a {
     font-weight: 400;
@@ -177,7 +192,7 @@ main {
     font-weight: 700;
     font-size: 30px;
     line-height: 32px;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .productsInfos_Box_txt p {
@@ -203,10 +218,6 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.productsList_action_select {
-    
 }
 
 .productsList_action_select select {
@@ -249,7 +260,7 @@ main {
 }
 .productsList_action_pagination p.active {
     font-weight: 700;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .productsList_list {
@@ -312,7 +323,7 @@ main {
     font-weight: 700;
     font-size: 17px;
     line-height: 32px;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .productsList_list_card_description p {
@@ -325,6 +336,19 @@ main {
     display: flex;
     align-items: baseline;
     gap: 10px;
+}
+
+.productsList_list_card_evaluations_stars {
+    display: flex;
+    gap: 5px;
+}
+
+.productsList_list_card_evaluations_stars svg path {
+    fill: #D9D9D9;
+}
+
+.productsList_list_card_evaluations_stars svg.active path {
+    fill: var(--color-principal);
 }
 
 .productsList_list_card_evaluations p {
@@ -343,7 +367,7 @@ main {
     padding: 11px 20px;
     max-width: 142px;
     max-height: 40px;
-    border: 1px solid var(--kaki);
+    border: 1px solid var(--color-principal);
     filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.15));
     border-radius: 83px;
     font-weight: 700;
@@ -351,18 +375,22 @@ main {
     line-height: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 .productsList_list_card_btn a:hover {
-    background: var(--kaki);
+    background: var(--color-principal);
     color: #fff;
 }
 
 /* FOOTER */
 
 footer {
-    background: rgba(122, 134, 106, 0.2);
+    background: var(--footer-bckg);
     padding: 2.9% 20% 3.68%;
+}
+
+.footer_logo svg path {
+    fill: var(--color-principal);
 }
 
 .footer_linksContact {
@@ -374,7 +402,7 @@ footer {
 .footer_linksContact_infos {
     font-size: 15px;
     line-height: 22px;
-    color: var(--kaki);
+    color: var(--color-principal);
 }
 
 .footer_linksContact_nav {
@@ -389,7 +417,7 @@ footer {
 
 .footer_linksContact_nav li a {
     font-size: 15px;
-    color: var(--kaki);
+    color: var(--color-principal);
     text-decoration: none;
 }
 
@@ -423,7 +451,7 @@ footer {
     }
 
     .header_action_mobile-research svg path {
-        fill: var(--kaki);
+        fill: var(--color-principal);
     }
 
     .header_action_mobile-research input {
@@ -506,7 +534,7 @@ footer {
         text-align: center;
     }
 
-    .footer_logo img {
+    .footer_logo svg {
         width: 125px;
     }
     
