@@ -10,8 +10,8 @@
     --pink-light: hsla(339, 57%, 72%, 0.2);
 
     /* Var */
-    --color-principal: var(--pink); /* (header, titre, buttons, svg, footer links) */
-    --footer-bckg: var(--pink-light);
+    --color-principal: var(--kaki); /* (header, titre, buttons, svg, footer links) */
+    --footer-bckg: var(--kaki-light);
 }
 
 
