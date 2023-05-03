@@ -593,7 +593,7 @@ select {
 
 .discoverUs {
     background: var(--color-principal);
-    padding: 77px 20%;
+    padding: 0 20%;
     position: relative;
 }
 
@@ -1219,7 +1219,7 @@ footer {
     }
 
     .discoverUs {
-        padding: 50px 5%;
+        padding: 50px 5% 0;
     }
 
     .discoverUs_box {
@@ -1486,7 +1486,7 @@ footer {
     }
 
     .discoverUs {
-        padding: 50px 5%;
+        padding: 50px 5% 0;
     }
 
     .discoverUs_box {
@@ -1536,8 +1536,6 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 20px;
     }
-
-
     
     footer {
         padding: 10% 5%;
@@ -1692,7 +1690,7 @@ footer {
     }
 
     .discoverUs {
-        padding: 75px 10%;
+        padding: 0 10%;
     }
 
     .avisClients {
