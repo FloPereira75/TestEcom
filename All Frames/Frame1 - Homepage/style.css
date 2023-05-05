@@ -204,6 +204,13 @@ header {
     border-radius: 83px;
 }
 
+.performancedesign_txt a:hover {
+    background: transparent;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+    height: 64px;
+}
+
 .performancedesign_illustration {
     width: 100%;
 }
@@ -287,6 +294,10 @@ header {
     outline: none;
 }
 
+.collections_cards_card_box_txt_arrow:hover {
+    background: var(--color-principal);;
+}
+
 .collections_btn {
     background: var(--color-principal);
     color: #FFFFFF;
@@ -297,6 +308,11 @@ header {
     text-decoration: none;
     border: 1px solid var(--color-principal);
     border-radius: 83px;
+}
+
+.collections_btn:hover {
+    background-color: transparent;
+    color: var(--color-principal);
 }
 
 /* NEW */
@@ -348,6 +364,15 @@ header {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.new_head_btn:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.new_head_btn:hover span svg path {
+    fill: var(--color-principal);
 }
 
 .productsList_list {
@@ -504,6 +529,15 @@ header {
 
 .avisClients_head_action_btn svg path {
     fill: var(--color-principal);
+}
+
+.avisClients_head_action_btn.active:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.avisClients_head_action_btn.active:hover svg path {
+    fill: white;
 }
 
 .avisClients_cards {
@@ -668,6 +702,15 @@ header {
     fill: var(--color-principal);
 }
 
+.quiSommesNous_btn:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.quiSommesNous_btn:hover svg path {
+    fill: white;
+}
+
 /* Sav Infos */
 
 .savInfo {
@@ -815,7 +858,7 @@ footer {
     }
 
     .performancedesign {
-        padding: 10% 2.5% 0;
+        padding: 25px 2.5% 0;
         flex-direction: column;
         gap: 50px;
     }
@@ -826,12 +869,15 @@ footer {
     .performancedesign_txt a {
         padding: 15px;
     }
+    .performancedesign_txt a:hover {
+        height: 54px;
+    }
     .performancedesign_illustration img {
         width: 100%;
     }
 
     .collections {
-        padding: 5% 5% 15%;
+        padding: 25px 5% 50px;
     }
     .collections_cards {
         flex-direction: column;
@@ -853,7 +899,7 @@ footer {
     }
 
     .new {
-        padding: 5%;
+        padding: 25px 5%;
     }
     .new_head {
         flex-direction: column;
@@ -878,7 +924,7 @@ footer {
     }
 
     .avisClients {
-        padding: 5%;
+        padding: 25px 5%;
         width: 100%;
     }
     .avisClients_head {
@@ -899,7 +945,7 @@ footer {
     }
 
     .quiSommesNous {
-        padding: 5% 0 0;
+        padding: 25px 0 0;
     }
     .quiSommesNous_Box {
         flex-direction: column;
@@ -921,7 +967,7 @@ footer {
         flex-direction: column;
         align-items: initial;
         gap: 20px;
-        padding: 5%;
+        padding: 25px 5%;
     }
     
     footer {

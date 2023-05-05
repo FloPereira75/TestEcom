@@ -207,6 +207,11 @@ main {
     line-height: 150%;
     letter-spacing: -0.2px;
     color: #333333;
+    cursor: pointer;
+}
+
+.radio-grp img {
+    cursor: pointer;
 }
 
 .commande_box_formulaire_form_paiement_box_body {
@@ -257,6 +262,12 @@ main {
 
 .commande_box_formulaire_form_btn span {
     font-weight: 400;
+}
+
+.commande_box_formulaire_form_btn:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
 }
 
 /* PARTIE ACHAT */
@@ -451,6 +462,12 @@ main {
     background: var(--color-principal);
     border-radius: 5px;
     border: none;
+}
+
+.commande_box_infosAchat_codePromo_btn:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
 }
 
 .commande_box_panierAvis_avisClients_cards {
@@ -700,10 +717,16 @@ footer {
 
     .commande {
         width: 100%;
+        margin-top: 0;
+    }
+
+    .commande h1 {
+        font-size: 30px;
     }
 
     .commande_box {
         flex-direction: column;
+        margin-top: 20px;
     }
 
     .commande_box input {
@@ -747,6 +770,7 @@ footer {
         align-items: inherit;
         gap: 20px;
         padding: 5%;
+        margin: 25px 0;
     }
 
     .savInfo_Box {

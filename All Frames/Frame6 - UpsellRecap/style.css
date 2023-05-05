@@ -219,6 +219,12 @@ main {
     border-radius: 83px;
 }
 
+.recap_box_infosClient_btn:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+}
+
 .recap_box_infosAchat {
     padding: 25px;
     width: 441px;
@@ -408,6 +414,14 @@ footer {
     main {
         margin: 0 5%;
     }
+
+    .recap {
+        margin: 25px auto;
+    }
+
+    .recap h1 {
+        font-size: 30px;
+    }
     
     .recap_box {
         flex-direction: column;
@@ -496,8 +510,20 @@ footer {
         margin: 0 5%;
     }
 
+    .recap {
+        margin: 25px auto;
+    }
+
+    .recap h1 {
+        font-size: 30px;
+    }
+
     .recap_box {
         flex-direction: column;
+    }
+
+    .recap_box_infosClient {
+        padding: 25px;
     }
 
     .recap_box_infosClient_body_content {
