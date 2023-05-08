@@ -498,6 +498,10 @@ footer {
 /* TABLET */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .header_logo svg {
+        width: 125px;
+    }
+
     main {
         margin: 0 5%;
     }
@@ -518,6 +522,10 @@ footer {
     footer {
         padding: 2.9% 5% 3.68%;
         gap: 30px;
+    }
+
+    .footer_logo svg {
+        width: 125px;
     }
 
     .footer_linksContact_nav {
