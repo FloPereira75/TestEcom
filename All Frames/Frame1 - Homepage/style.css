@@ -857,6 +857,14 @@ footer {
         display: none;
     }
 
+    .offcanvas {
+        width: 300px !important;
+    }
+
+    .offcanvas-body .navbar-nav {
+        align-items: flex-start !important;
+    }
+
     .performancedesign {
         padding: 25px 2.5% 0;
         flex-direction: column;
@@ -935,6 +943,7 @@ footer {
         overflow-x: overlay;
         width: 100%;
         display: -webkit-inline-box;
+        margin-top: 25px;
     }
     .avisClients_cards::-webkit-scrollbar {
         width: 0px;

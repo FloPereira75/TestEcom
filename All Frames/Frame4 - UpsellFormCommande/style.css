@@ -740,6 +740,10 @@ footer {
         padding: 25px 20px;
     }
 
+    .commande_box_formulaire_form form {
+        gap: 25px;
+    }
+
     .radio-grp_cards-icons {
         display: flex;
         gap: 3px;
